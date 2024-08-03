@@ -1,0 +1,4 @@
+functions_framework
+yt-dlp[default] @ https://github.com/yt-dlp/yt-dlp/archive/master.zip
+google-cloud-storage
+requests
