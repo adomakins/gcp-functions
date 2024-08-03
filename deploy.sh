@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# THIS FILE IS OPTIONAL, just helps for deploying functions faster
+#
+# If you want to use it:
+# Make sure you have the gcloud CLI installed and you're signed in
+# Add your account name to the bottom of this file where it says to
+# Give it permission to run with chmod +x deploy.sh
+# Then run ./deploy.sh <folder-name> to deploy your function to GCP
+
 # Check if a function name was provided
 if [ $# -eq 0 ]; then
     echo "Error: No function name provided."
@@ -44,7 +52,7 @@ gcloud functions deploy "$FUNCTION_NAME" \
     --entry-point "$ENTRY_POINT" \
     --allow-unauthenticated \
     --ignore-file=../.gcloudignore \
-    --service-account=836705719816-compute@developer.gserviceaccount.com
+    --service-account= # ADD YOUR ACCOUNT NAME HERE
 
 # Change back to the original directory
 cd ..
